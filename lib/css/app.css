@@ -72,41 +72,34 @@ body {
 			margin:0 25px; }
 	
 	/* interaction */
-	#nav .navItem.active { 
-		background:#2899ff; }
-		
-	/* current */
-	#nav .navItem.current 						{ pointer-events:none; cursor:default; }
-	
-	#nav .navItem.btnWeek:nth-child(1).current 	{ background:#b14bca; }
-	#nav .navItem.btnWeek:nth-child(2).current 	{ background:#ff3b2f; }
-	#nav .navItem.btnWeek:nth-child(3).current 	{ background:#ff9501; }
-	#nav .navItem.btnWeek:nth-child(4).current 	{ background:#49be1f; }
-	#nav .navItem.btnWeek:nth-child(5).current 	{ background:#007aff; }
-	
-	#nav .navItem.btnExtra.current 				{ background:#00549f; }
+	#nav .navItem.active 	{ background:#2899ff; }
+	#nav .navItem.current,
+	#nav .navItem.disabled 	{ pointer-events:none; cursor:default; opacity:0.3; }
 	
 	/* -------------------------------------------------------------------------- */
-	/* btnMenu */
-	#nav .btnMenu { 
+	/* btnWeekNav */
+	#nav .btnWeekNav { 
 		display:block; position:absolute; top:0; left:0; width:50px; height:50px; margin:0; padding:0; overflow:hidden;
 		color:#fff; }
+	#nav .btnWeekNav[data-forward="1"] { 
+		left:auto; right:0; }
 		
 		/* icon */
-		#nav .btnMenu .icon { 
+		#nav .btnWeekNav .icon { 
 			top:0; left:0; width:100%; height:100%; 
-			font-size:28px; line-height:50px; }
+			font-size:14px; line-height:50px; }
 			
 	/* interaction */
-	#nav .btnMenu.active { 
+	#nav .btnWeekNav.active { 
 		background:#2899ff; }
 
-/* -------------------------------------------------------------------------- */
-/* variations */
-#nav.week .navItem.btnExtra 	{ display:none; }
-#nav.extra .navItem.btnWeek,
-#nav.extra .navItem.btnWeekNav 	{ display:none; }
-
+	/* -------------------------------------------------------------------------- */
+	/* navTitle */
+	#nav .navTitle { 
+		width:auto; height:auto; margin:0 50px; padding:0; overflow:hidden;
+		color:#fff; text-transform:uppercase;
+		font-family:'LeagueGothic',sans-serif; font-size:24px; font-weight:400; line-height:50px; text-align:center; }
+	
 
 /* ==========================================================================
    structure - PAGE
@@ -173,29 +166,6 @@ body {
 	.pageNav .navItem.disabled.active { 
 		color:#666; background:#252525; border-color:rgba(255,255,255,0.15);
 		pointer-events:none; cursor:default; }
-		
-	/* -------------------------------------------------------------------------- */
-	/* btnAudio */
-	
-	/* status - normal */
-	.pageNav .navItem.btnAudio #statusOn 				{ display:block; }
-	.pageNav .navItem.btnAudio #statusOff 				{ display:none; }
-	.pageNav .navItem.btnAudio #statusDisable 			{ display:none; }
-	
-	/* status - running */
-	.pageNav .navItem.btnAudio.running #statusOn 		{ display:none; }
-	.pageNav .navItem.btnAudio.running #statusOff 		{ display:block; }
-	.pageNav .navItem.btnAudio.running #statusDisable 	{ display:none; }
-	
-	/* status - stopped */
-	.pageNav .navItem.btnAudio.stopped #statusOn 		{ display:block; }
-	.pageNav .navItem.btnAudio.stopped #statusOff 		{ display:none; }
-	.pageNav .navItem.btnAudio.stopped #statusDisable 	{ display:none; }
-	
-	/* status - disbaled */
-	.pageNav .navItem.btnAudio.disabled #statusOn 		{ display:none; }
-	.pageNav .navItem.btnAudio.disabled #statusOff 		{ display:none; }
-	.pageNav .navItem.btnAudio.disabled #statusDisable 	{ display:block; }
 
 
 /* ==========================================================================
