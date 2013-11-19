@@ -49,8 +49,8 @@
 /* landing articles */
 [data-role="article"][data-index="0"].in { 
 										opacity:0;
-										-webkit-transform:translate3d(3%,0,0) scale(0.9) rotate3d(1,0,0,0deg); 
-										transform:translate3d(3%,0,0) scale(0.9) rotate3d(1,0,0,0deg); }
+										-webkit-transform:translate3d(3%,0,0) scale(1.1) rotate3d(1,0,0,0deg); 
+										transform:translate3d(3%,0,0) scale(1.1) rotate3d(1,0,0,0deg); }
 																	
 [data-role="article"][data-index="0"].out { 
 										opacity:0;
