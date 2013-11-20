@@ -131,8 +131,7 @@ body {
 /* -------------------------------------------------------------------------- */
 /* container */
 .pageHeader {
-	position:absolute; top:0; left:0; width:100%; height:100px; margin:0; padding:0; overflow:hidden;
-	/*background:rgba(255,255,255,0.2);*/  }
+	position:absolute; top:0; left:0; width:100%; height:100px; margin:0; padding:0; overflow:hidden; }
 
 	/* -------------------------------------------------------------------------- */
 	/* headerTitle */
@@ -140,6 +139,14 @@ body {
 		display:block; width:auto; height:auto; margin:30px 22px 0 22px; padding:0; overflow:hidden;
 		color:#7f439b; text-transform:uppercase;
 		font-family:'LeagueGothic',sans-serif; font-size:35px; font-weight:400; line-height:1em; }
+
+/* -------------------------------------------------------------------------- */
+/* responsive */
+@media only screen and (min-width:360px) {
+	/* make title bigger */
+	.pageHeader { height:105px; }
+	.pageHeader .headerTitle { font-size:40px; }
+}
 
 
 /* ==========================================================================
@@ -338,6 +345,10 @@ section,
 	padding:30px 22px 60px 22px;
 	/*box-sizing*/-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; }
 
+/* padded box - android */
+.android .padded { 
+	padding-top:0; padding-bottom:30px; }
+
 
 /* ==========================================================================
    common - SCROLLER
@@ -354,8 +365,8 @@ section,
 		-webkit-transform:translateZ(0); transform:translateZ(0); }
 
 /* mask */
-.scroller.mask {
-	-webkit-mask-image:-webkit-linear-gradient(top, transparent 4%, white 12%, white 75%, transparent 97%); }
+.ios .scroller.mask {
+	-webkit-mask-image:-webkit-linear-gradient(top, transparent 4%, white 10%, white 75%, transparent 97%); }
 	
 /* IScroll */
 .iScrollVerticalScrollbar { width:5px!important; right:2px!important; opacity:0.6!important; }
@@ -494,6 +505,14 @@ section,
 	-webkit-transform:scale(1);
 	transform:scale(1); }
 
+/* responsive */
+@media only screen and (min-width:360px) {
+	/* make titles bigger */
+	#pgHome .intro		{ padding-top:40px; }
+	#pgHome .title 		{ font-size:50px; line-height:1em; }
+	#pgHome .subtitle 	{ font-size:16px; line-height:1.2em; }	
+}
+
 /* -------------------------------------------------------------------------- */
 /* nav */
 #pgHome .nav {
@@ -532,7 +551,7 @@ section,
 
 /* -------------------------------------------------------------------------- */
 /* responsive */
-@media only screen and (min-width:350px) {
+@media only screen and (min-width:360px) {
 	/* bigger subtitle */
 	#pgHome .nav .navItem .sublabel { font-size:20px; }
 }
@@ -624,6 +643,9 @@ section,
 				-webkit-transition:top 0s ease-in-out;
 				transition:top 0s ease-in-out; }
 			
+			/* android */
+			.android #pgWeeks .pageHeader + .pageContent { bottom:40px; }
+			
 				/* scroller */
 				#pgWeeks .pageContent > [data-role="article"] > .scroller { 
 					position:absolute; top:0; left:0; bottom:0; width:100%; }
@@ -637,13 +659,17 @@ section,
 
 /* -------------------------------------------------------------------------- */
 /* responsive */
-@media only screen and (min-width:350px) {
+@media only screen and (min-width:360px) {
 	/* increase image size */
 	#pgWeeks .sectionWrapper [data-role="section"] .flower 				{ height:320px; right:-10px; }
 	#pgWeeks .sectionWrapper [data-role="section"]:nth-child(5) .flower { height:320px; right:-25px; }
+	/* make title bigger, move content down */
+	#pgWeeks .pageHeader + .pageContent { top:105px; }
+	/* android */
+	.android #pgWeeks .pageHeader + .pageContent { top:135px; }
 }
 
-			
+
 /* -------------------------------------------------------------------------- */
 /* landing */
 
@@ -698,7 +724,7 @@ section,
 
 /* -------------------------------------------------------------------------- */
 /* responsive */
-@media only screen and (min-width:350px) {
+@media only screen and (min-width:360px) {
 	/* increase link size */
 	#pgWeeks [data-role="articleContent"] .articleNav,
 	#pgWeeks [data-role="articleContent"] .articleNav li { font-size:16px; }
