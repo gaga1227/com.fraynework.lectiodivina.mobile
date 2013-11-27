@@ -690,7 +690,7 @@ section,
 				transition:top 0s ease-in-out; }
 			
 			/* android */
-			.android #pgWeeks .pageHeader + .pageContent { bottom:40px; }
+			.android #pgWeeks .pageHeader + .pageContent { top:125px; bottom:40px; }
 			
 				/* scroller */
 				#pgWeeks .pageContent > [data-role="article"] > .scroller { 
@@ -787,7 +787,10 @@ section,
 /* hide pageHeader */
 #nav.extra + #container .pageHeader { display:none; }
 
-
+/* padded */
+.android #nav.extra + #container .padded { padding-top:30px; }
+	
+	
 /* ==========================================================================
    Common Styles
    Author: JX 20120127
